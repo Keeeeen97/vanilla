@@ -6,50 +6,146 @@
 }
 
 body {
-    background-image: linear-gradient(-90deg, rgb(207, 207, 207), rgb(148, 148, 148));
+    background-image: linear-gradient(-90deg, rgb(224, 222, 222), rgb(121, 120, 120));
 }
 
-.container {
-    width: 100%;
-    max-width: 90%;
-    margin-inline: auto;
-    padding: 10px;
-}
 
-.navbar {
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #222;
-}
-
-.wrapper {
-    height: 50px;
+    padding: 20px 8%;
+    background: #081b29;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 }
 
-.container .brand {
-    font-weight: bold;
-    font-size: x-large;
-    text-decoration: none;
-    color: #fff;
-}
-
-.navLinks {
-    list-style: none;
+.header ul {
     display: flex;
-    gap: 10px;
+    gap: 30px;
 }
 
-.navLinks a {
+.brand {
+    font-size: 1.6rem;
     text-decoration: none;
-    color: #fff;
+    color: #ededed;
+    font-weight: 600;
+    cursor: default;
 }
 
-section {
-    margin-top: 60px;
+.navbar ul {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: #ededed;
+    transition: .3s;
+}
+
+.navbar ul a:hover {
+    color: #00abf0;
+}
+
+.navbar ul a.active {
+    color: #00abf0;
+}
+
+.home {
     height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.content {
+    max-width: 500px;
+}
+
+.content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #081b29;
+    line-height: 1.2;
+}
+
+.content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    color: #081b29;
+}
+
+.content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background-color: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: .5s;
+}
+
+.btn-box a:first-child {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:first-child:hover {
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+    background-color: #00abf0;
+    color: #081b29;
+}
+
+.about{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.projects{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.contact{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
 }
