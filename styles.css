@@ -4,12 +4,14 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
+    scroll-padding: 10rem;
 }
 
 body {
     background-image: linear-gradient(-90deg, rgb(224, 222, 222), rgb(121, 120, 120));
 }
 
+/* Nav */
 
 .header {
     position: fixed;
@@ -50,12 +52,14 @@ body {
 }
 
 .navbar ul a:hover {
-    color: #00abf0;
+    color: #0084b8;
 }
 
 .navbar ul a.active {
-    color: #00abf0;
+    color: #0084b8;
 }
+
+/* Home */
 
 .home {
     height: 100vh;
@@ -64,6 +68,7 @@ body {
     padding: 0 10%;
     gap: 200px;
 }
+
 .home img {
     width: 100%;
     height: 300px;
@@ -83,7 +88,7 @@ body {
 .content h3 {
     font-size: 32px;
     font-weight: 700;
-    color: #00abf0;
+    color: #0084b8;
 }
 
 .content p {
@@ -105,8 +110,8 @@ body {
     align-items: center;
     width: 150px;
     height: 100%;
-    background-color: #00abf0;
-    border: 2px solid #00abf0;
+    background-color: #0084b8;
+    border: 2px solid #0084b8;
     border-radius: 8px;
     font-size: 19px;
     color: #081b29;
@@ -122,20 +127,21 @@ body {
 
 .btn-box a:nth-child(2) {
     background: transparent;
-    color: #00abf0;
+    color: #0084b8;
 }
 
 .btn-box a:first-child:hover {
     background: transparent;
-    color: #00abf0;
+    color: #0084b8;
 }
 
 .btn-box a:nth-child(2):hover {
-    background-color: #00abf0;
+    background-color: #0084b8;
     color: #081b29;
 }
 
-.about{
+/* About */
+.about, .projects, .contact{
     height: 100vh;
     display: flex;
     align-items: center;
@@ -175,6 +181,7 @@ body {
     border: 1px solid hsla(0, 0%, 0%, 0.75);
     border-radius: 5px;
     min-width: 250px;
+    margin-bottom: 40px;
 }
 
 .about .educ-card .title {
@@ -184,7 +191,7 @@ body {
     border-bottom: 1px solid hsla(0, 0%, 0%, 0.5);
     border-radius: 5px;
     font-weight: bold;
-    color: #00abf0;
+    color: #0084b8;
     padding: 10px 0;
 }
 
@@ -202,16 +209,77 @@ body {
     color: #081b29;
 }
 
-.projects{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    place-items: center;
 }
 
-.contact{
-    height: 100vh;
+.skills {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 500px;
+    width: 100%;
+    background: #0084b8;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+.skill-box {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+}
+
+.skill-title {
+    color: #081b29;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.percent {
+    color: #081b29b9;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.progress-bar {
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.progress-per {
+    display: block;
+    height: 8px;
+    width: 80%;
+    border-radius: 6px;
+    background: #081b29;
+}
+
+.progress-per.css {
+    width: 70%;
+}
+
+.progress-per.js {
+    width: 50%;
+}
+
+.progress-per.react {
+    width: 30%;
+}
+
+.progress-per.bootstrap {
+    width: 50%;
+}
+
+.progress-per.tailwind {
+    width: 50%;
+}
+
+.progress-per.git {
+    width: 60%;
 }
